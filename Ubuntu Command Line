@@ -1,0 +1,143 @@
+LAB-1 
+1.	pwd    (present working directory) 
+2.	cd  ..   (change directory, one step back) 
+3.	cd    /   (To navigate into root directory) 
+4.	cd   /home/student    (change directory to student) 
+5.	ls   ~   (will show files/folders that are in home directory) 
+6.	ls   (folders in your current directory) 
+7.	ls   -l   ( Gives list of files and folders, no hidden) 
+8.	ls  –al  (List of the files and folders with hidden) 
+9.	cd   /etc   (one type of directory under home directory, but need to go first root(/) directory ) 
+10.	mkdir   folder_name  (create a new folder in current location) 
+11.	touch   filename.extension(.txt)  (create a file, extension not necessary) 
+12.	touch   file1 file2 file3…..  (create multiple files) 
+13.	gedit   file_name.extension  (create + open file) 
+14.	cat   file_name  (open the file in terminal) 
+15.	cp    source(file_path)   destination(file_path)    (copy from source to destination) 
+16.	mv   source(file_path)   destination(file_path)   (move from source to destination) 
+17.	mv   old_file_name    new_file_name   (Renaming a file) 
+18.	rm   file_name   (Remove a file) 
+19.	rm   –f   file_name   (Remove a file forcefully) 
+20.	cp   –r  source(file_path)   destination(file_path)   (directory copy to destination) 
+21.	mv   source(file_path)   destination(file_path)   (move directory to destination) 
+22.	mv   –rf   directory_name  (remove forcefully) 
+23.	mv   old_directory_name    new_directory_name   (Renaming a directory) 
+24.	cat   /etc/passwd   (User’s info) 
+25.	cat   /etc/group  (Group’s info) 
+ 
+ 
+ 
+ 
+ 
+LAB-2 
+1.	sudo  adduser  username (create an user) 
+2.	sudo  userdel  username (delete an user) 
+3.	id  -gn (check a primary group of a user) 
+4.	sudo  passwd  username (change the password of a user) 
+5.	sudo  su  username  (switch to another user) 
+6.	su  username  (Back from the switched user to the previous user) 
+7.	sudo  groupadd  group_name (create a group) 
+8.	sudo  groupdel  group_name (deleting a group) 
+9.	sudo  adduser  user_name  group_name  (adding an user to a group) 
+10.	sudo  deluser  user_name  group_name  (delete an user from a group) 
+11.	sudo  usermod  -g  group_name  user_name  (change the primary group of the user) 
+12.	sudo  adduser  -g  group_name  user_name  (assigning a user to a group) 
+13.	sudo adduser –g  group1,group2….   user_name  (assigning an user to multiple group) 
+14.	sudo  adduser  -a  -G   group_name1,group2…  user_name  (assigning the current user to multiple group/single group) 
+15.	ls  -l  (show file/folder characteristics) 
+16.	groups  user_name (Show list of groups a user is assigned) 
+17.	id  user_name  (user id + groups details of the user, first group is the primary group) 
+ 
+File Permission 
+1.	sudo chmod 750 file_name (change permission of a file, -111 101 000) 
+2.	sudo chmod 777 folder_name (change permission of a group) 
+3.	sudo chmod –R  676  folder_name(permission change of folder+ sub folders recursively) 
+4.	sudo chmod u+x,g+x,o+x (execute enabled for User owner, Group owner and other owner) 
+5.	sudo  chmod  u-r,g-r,o-r (read mode disabled for all) 
+6.	sudo  chown  user_name  file_name  (change user ownership of a file) 
+7.	sudo  chgrp  group_name  file_name  (change group ownership of a file) 
+8.	sudo  chown  -R  user_name  folder_name  (change user ownership of a directory) 
+9.	sudo  chgrp  -R  group_name  folder_name (change group ownership of a directory) 10. ls  -l  (to see all the permissions) 
+  
+LAB-3 
+ 
+1.	uniq  file.txt  (unique text but the same text must be in successive manner to ignore. 
+2.	sort  file.txt (Sort alphabetically) 
+3.	sort  file | uniq  -c  ( unique lines in the file and their quantity) 
+4.	sort  file  | uniq   -d  (Output duplicate lines only once) 
+5.	sort  file  | uniq   –(dc/cd)  (Duplicate + their total count) 
+6.	sort file  | uniq  -D (Show all the duplicates, no unique value) 
+7.	sort  file  | uniq  -u (show all the unique lines , no duplicate) 
+8.	sort file  | uniq  -i(u/d/dc/D)  (i=insensitive) 
+9.	grep  the  file.txt (show lines which has a subset “the” ) 
+10.	grep  -w   the  file.txt  (show lines which has a word “the”) 
+11.	grep  -wn  the  file.txt  (show lines  which has a word “the” + it’s line No) 
+12.	grep  -iwn cat file.txt  (case insensitive search) 
+13.	grep  -iwnv  cat  file.txt ( w=reverse, n=line no ,w=word) 
+14.	grep  -i(w/n/nv/wn)  man file.txt 
+15.	grep  -(A/C/B)  2  the file.txt  (Show After/ (After+Before) / Before (with 2 lines) 
+16.	head  file.txt (show first 10 lines) 
+17.	tail  file.txt  (show last 10 lines) 
+18.	head/tail  -5  file.txt (show first/last 5 lines) 
+19.	head  -12  file.txt | tail  -3 (show line 12,11,10) 
+20.	head  -10  file.txt |tail -5  (>/>>)file2.txt  (< meas open+replace, >> means open+append. 
+21.	wc  file.txt  (ex. 10 20 116 file.txt=line,word,size,file_name) 
+22.	wc  -(wl/w/l)  ( w=word,l=line) 
+23.	wc  -(w/l/wl) >> file2.txt    
+ 
+ 
+ 
+ 
+ 
+ 
+LAB-4 
+1.	vi filename edit filename starting at line 1 
+2.	ESC  (Command mode) 
+3.	:q!  (Exit and ignore any changes)   
+4.	ZZ/wq  (Exit and save changes) 
+5.	Navigate (h, j, k, l=left, down, up, right) 
+6.	$   (Move cursor to end of current line) 
+7.	zero (0)   (move cursor the start of the current line) 
+8.	^   (Move cursor beginning of the word of the line, ignore any spaces before the word) 
+9.	w  ( Jump beginning of the next word, if line is over then beginning of the next line) 
+;/;//%^Dhaka -> jumping from before semicolon to before D. w->counts punctuation 
+10.	W  ( don’t count punctuation,  ;/;@#;;;;Dhaka is , Jumps form before semicolon(;) to before i, not considering punctuation marks. 
+11.	a   (Append after the cursor) 
+12.	A  (Append after line) 
+13.	O  (Open a new line before the current line) 
+14.	I   (Insert before line). 
+15.	i   (insert before cursor) 
+16.	r  (replace one character) 
+17.	R  (Replace many character) 
+18.	D/dd   (Delete current line) 
+19.	dw  (delete single word beginning with character under cursor) 
+20.	x  (delete single character under cursor) 
+21.	yy  (copy the current line into the buffer) 
+22.	5 yy   (Copy the next 5 lines, including the current line into the buffer) 
+23.	p   (put/paste after the line) 
+24.	P   (paste before the line) 
+25.	u   (undo the last changes) 
+26.	U  (undo the all changes in a line) 
+ 
+ 
+ 
+ 
+27.	gzip file.txt   creates a file.gz on Linux, replace the original with file.gz 
+28.	gunzip file.txt  (reproduce the text file replacing the file.gz) 
+29.	zip  myzip.zip   file.txt file2.txt pic.zip   (file,file2,pic will be stored as myzip.zip without replacing the original files, folders, zip .. )  
+30.	unzip myzip.zip  (unzip the .zipped file) 
+31.	tar   –cvf  mytar.tar file file2 file4 myzip  (shows all archived materials) 
+32.	tar   –cf   mytar.tar file file2 file4 myzip  (Don’t show all archived materials) 
+33.	tar   –tvf   mytar.tar  (show all the details of the archived materials) 
+34.	tar   –xvf   mytar.tar  (Extract a tar) 
+35.	tar   –czvf  cpp.tar.gz  myzip.zip file file2  (c=create an archive,z=compress the archive with zip,v=display progress in the terminal,f=allows to specify the f_name of the archive) 
+36.	tar  -xzvf  cpp.tar.gz  (Extract a tar.gz file on Linux) 
+37.	find  -mtime  -7(days)  –ls  (show all modified files of N days Under current directory) 
+38.	find   -name   *  (show all details under current directory, it won’t work sometimes) 
+39.	find   -name   myzip.zip  ( search a zip file in current directory) 
+40.	find  -type  f/d  
+41.	find   /home/student/Downloads  –type  f 
+42.	find  /home/student/Downloads   -type  f  –name  lab2 
+ 
+ 
+ 
