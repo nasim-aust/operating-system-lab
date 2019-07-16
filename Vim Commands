@@ -1,0 +1,63 @@
+ 
+vi Editor Commands
+
+ 
+ 
+ 
+General Startup
+       To use vi: vi filename
+      To exit vi and save changes: ZZ   or  :wq        To exit vi without saving changes: :q!
+      To enter vi command mode: [esc] 
+Counts
+        A number preceding any vi command tells vi to repeat        that command that many times.
+Cursor Movement
+  h       move left (backspace)  
+j       move down  
+k       move up  
+l       move right (spacebar)
+       [return] move to the beginning of the next line
+      $       last column on the current line   
+0       move cursor to the first column on the 
+               current line
+       ^       move cursor to first nonblank column on the
+               current line
+       w       move to the beginning of the next word or 
+               punctuation mark
+       W       move past the next space
+       b       move to the beginning of the previous word 
+               or punctuation mark
+       B       move to the beginning of the previous word,
+               ignores punctuation
+       e       end of next word or punctuation mark
+       E       end of next word, ignoring punctuation
+       {       Previous paragraph
+       }       Next paragraph
+       H       move cursor to the top of the screen 
+       M       move cursor to the middle of the screen
+       L       move cursor to the bottom of the screen 
+ 
+Screen Movement
+       G        move to the last line in the file
+       xG       move to line x        
+ 
+Inserting        
+ r        replace character under cursor with next 
+               character typed
+      R        keep replacing character until [esc] is hit        
+      i        insert before cursor       
+a        append after cursor
+       A        append at end of line
+      O        open line above cursor and enter append mode Deleting    
+x       delete character under cursor       
+dd      delete line under cursor    
+dw      delete word under cursor      
+db      delete word before cursor
+ 
+Copying Code      
+yy     (yank)'copies' line which may then be put by         the p(put) command. Precede with a count for
+               multiple lines.
+Put Command         brings back previous deletion or yank of lines,
+      words, or characters    
+P       bring back before cursor      
+p       bring back after cursor
+ 
